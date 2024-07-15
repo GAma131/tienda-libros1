@@ -1,5 +1,5 @@
 import React from "react";
-import PostCupon from "../actions/insertCupon/postCupon";
+import PostCupon from "../actions/postCupon";
 
 const InsertCupon = () => {
   const { formData, handleChange, handleSubmit } = PostCupon();

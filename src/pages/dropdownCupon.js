@@ -1,5 +1,5 @@
 import React from "react";
-import GetCupones from "../actions/insertCupon/getCupon";
+import GetCupones from "../actions/getCupon";
 
 const DropdownCupon = () => {
   const { cupones, loading, error } = GetCupones();

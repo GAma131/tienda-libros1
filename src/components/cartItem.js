@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import React from 'react';
 import { useDispatch } from "react-redux";
 import { changeQuantity } from "../stores/cart";
-import caratulaI from "../assets/images/caratulaI.jpg"
-import GetLibros from "../actions/insertLibro/getLibro";
+import GetLibros from "../actions/getLibro";
 
 const CartItem = (props) => {
   const { productId, quantity } = props.data;

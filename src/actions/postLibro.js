@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-const PostLibro = () => {
+const PostLibro = (coverUrl) => {
   const [formData, setFormData] = useState({
     titulo: "",
     fechaPublicacion: "",
     autorLibro: "",
+    imagenLibro: "", // Asegúrate de que coincida con el nombre en InsertLibro
   });
 
   const handleChange = (e) => {
@@ -22,6 +23,7 @@ const PostLibro = () => {
       titulo: formData.titulo,
       fechaPublicacion: new Date(formData.fechaPublicacion).toISOString(),
       autorLibro: formData.autorLibro,
+      imagenLibro: coverUrl
     };
 
     try {
@@ -32,6 +34,7 @@ const PostLibro = () => {
         },
         body: JSON.stringify(libroData),
       });
+      console.log(libroData);
 
       if (response.ok) {
         const result = await response.json();

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleStatusTab } from "../stores/cart";
 import CartItem from "./cartItem";
 import Boton from "./boton";
+import CuponDropdown from "./cuponDropdown";
 
 const CartTab = () => {
   // Obtener items del carrito desde Redux
@@ -25,10 +26,13 @@ const CartTab = () => {
         {carts.map((item, key) => (
           <CartItem key={key} data={item}></CartItem>
         ))}
+        <div className="flex mt-4 w-full justify-center">
+          <CuponDropdown />
+          <button onClick={handleCloseTabCart} className="">
+            <Boton texto="Nuevo" redirectTo="/insertCupon" />
+          </button>
+        </div>
       </div>
-      <button onClick={handleCloseTabCart} className="flex w-11/12">
-        <Boton texto="Cupon +" redirectTo="/insertCupon" />
-      </button>
       <div className="grid grid-cols-2 h-[70px]">
         <button className="bg-black text-white" onClick={handleCloseTabCart}>
           CLOSE

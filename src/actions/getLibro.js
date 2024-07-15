@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import caratulaI from "../../assets/images/caratulaIIII.jpg"
 
 const GetLibros = (option) => {
   const [books, setBooks] = useState([]);
@@ -21,11 +20,13 @@ const GetLibros = (option) => {
             id: bookDetail.libreriaMaterialId,
             name: bookDetail.titulo,
             price: Math.floor(Math.random() * (700 - 200 + 1)) + 200,
-            image: caratulaI,
+            image: bookDetail.imagenLibro,
             description: bookDetail.fechaPublicacion, // Assuming there's a description field
-            slug: bookDetail.libreriaMaterialId
+            slug: bookDetail.libreriaMaterialId,
+            autor: bookDetail.autorLibro
           };
           setBooks(transformedDetail);
+          console.log(transformedDetail);
         } else {
             setBooks(null);
         }

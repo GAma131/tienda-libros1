@@ -1,5 +1,5 @@
 import React from 'react';
-import PostAutor from '../actions/insertAutor/postAutor';
+import PostAutor from '../actions/postAutor';
 
 const InsertAutor = () => {
   const { formData, handleChange, handleSubmit } = PostAutor();

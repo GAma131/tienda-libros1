@@ -19,10 +19,11 @@ const Home = () => {
           id: item.libreriaMaterialId,
           name: item.titulo,
           price: Math.floor(Math.random() * (700 - 200 + 1)) + 200,
-          image: caratulaI,
+          image: item.imagenLibro,
           slug: item.libreriaMaterialId
         }));
         setBooks(transformedData);
+        console.log(transformedData);
       })
       .catch(error => {
         console.error('There was an error fetching the books!', error);
