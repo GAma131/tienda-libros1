@@ -38,6 +38,16 @@ const InsertCupon = () => {
 
           />
         </div>
+        <div className="mb-4">
+          <label className="font-bold">Fecha de vencimiento:</label>
+          <input
+            type="date"
+            name="vencimiento"
+            value={formData.vencimiento}
+            onChange={handleChange}
+            className="w-full px-2 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+          />
+        </div>
         <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
           Crear
         </button>

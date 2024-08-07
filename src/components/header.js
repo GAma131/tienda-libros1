@@ -17,10 +17,15 @@ const Header = () => {
     dispatch(toggleStatusTab());
   }
   return (
-    <header className="flex justify-between items-center mb-5">
-      <Link to="/" className="text-xl font-semibold">
-        Home.
-      </Link>
+    <header className="flex justify-between items-center mb-5 p-2">
+      <div className="w-full flex justify-between items-center">
+        <Link to="/" className="text-2xl font-semibold">
+          | Home
+        </Link>
+        <Link to="/autores" className="text-sm font-semibold mr-5">
+          | Autores
+        </Link>
+      </div>
       <div className="w-10 h-10 bg-gray-100 rounded-full flex justify-center items-center relative" onClick={handleOpenTabCart}>
         <img src={iconCart} alt="" className="w-6" />
         <span className="absolute top-2/3 righ-1/2 bg-red-500 text-white text-sm w-5 h-5 rounded-full flex justify-center items-center">

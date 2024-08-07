@@ -37,16 +37,6 @@ const InsertAutor = () => {
           className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
         />
       </div>
-      {/* <div className="mb-4">
-        <label className="block text-gray-700 font-bold mb-2">Imagen:</label>
-        <input
-          type="text"
-          name="imgData"
-          value={formData.imgData}
-          onChange={handleChange}
-          className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
-        />
-      </div> */}
       <button
         type="submit"
         className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-sky-500"

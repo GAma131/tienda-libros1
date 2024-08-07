@@ -22,6 +22,8 @@ const PostCupon = () => {
         cuponCode: formData.code,
         porcentajeDescuento: formData.discount,
         descuentominimo: formData.minDiscount,
+        fechaInicio: new Date(),
+        fechaVencimiento: formData.vencimiento
       };
   
       try {

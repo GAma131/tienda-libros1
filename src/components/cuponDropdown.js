@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const CuponDropdown = () => {
+const CuponDropdown = ({ onSelectCoupon }) => {
   const [cupones, setCupones] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,11 @@ const CuponDropdown = () => {
 
   return (
     <div className="max-w-72">
-      <select id="cupones" className="w-full p-3 rounded-xl">
+      <select
+        id="cupones"
+        className="w-full p-3 rounded-xl"
+        onChange={(e) => onSelectCoupon(e.target.value)}
+      >
         <option value="">Cupones</option>
         {cupones.map((cupon) => (
           <option key={cupon.cuponId} value={cupon.cuponId}>
@@ -32,3 +36,4 @@ const CuponDropdown = () => {
 };
 
 export default CuponDropdown;
+

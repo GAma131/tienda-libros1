@@ -64,6 +64,18 @@ const InsertLibro = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2">
+            Precio:
+          </label>
+          <input
+            type="number"
+            name="precio"
+            value={formData.precio}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold mb-2">
             Autor del Libro:
           </label>
           <div className="flex">

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import InsertLibro from './pages/insertLibro';
 import InsertAutor from './pages/InsertAutor';
 import InsertCupon from './pages/InsertCupon';
+import Autores from './pages/autores';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/insertLibro' element={<InsertLibro/>}/>
           <Route path='/insertAutor' element={<InsertAutor/>}/>
           <Route path='/insertCupon' element={<InsertCupon/>}/>
+          <Route path='/autores' element={<Autores/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

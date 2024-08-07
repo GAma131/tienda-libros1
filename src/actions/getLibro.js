@@ -19,14 +19,13 @@ const GetLibros = (option) => {
           const transformedDetail = {
             id: bookDetail.libreriaMaterialId,
             name: bookDetail.titulo,
-            price: Math.floor(Math.random() * (700 - 200 + 1)) + 200,
+            price: bookDetail.precio,
             image: bookDetail.imagenLibro,
             description: bookDetail.fechaPublicacion, // Assuming there's a description field
             slug: bookDetail.libreriaMaterialId,
             autor: bookDetail.autorLibro
           };
           setBooks(transformedDetail);
-          console.log(transformedDetail);
         } else {
             setBooks(null);
         }

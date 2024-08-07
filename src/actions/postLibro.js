@@ -4,6 +4,7 @@ const PostLibro = (coverUrl) => {
   const [formData, setFormData] = useState({
     titulo: "",
     fechaPublicacion: "",
+    precio: "",
     autorLibro: "",
     imagenLibro: "", // Asegúrate de que coincida con el nombre en InsertLibro
   });
@@ -22,6 +23,7 @@ const PostLibro = (coverUrl) => {
     const libroData = {
       titulo: formData.titulo,
       fechaPublicacion: new Date(formData.fechaPublicacion).toISOString(),
+      precio: formData.precio,
       autorLibro: formData.autorLibro,
       imagenLibro: coverUrl
     };
